@@ -1,9 +1,12 @@
 package practice.lessons.inheritancenew;
 
+import practice.lessons.inheritancelesson.Vehicle;
+
 public class Main {
 
     public static void main(String[] args) {
-        Son son = new Son();
+        Truck truck = new Truck(10, 5, 10);
+
     }
 
 }

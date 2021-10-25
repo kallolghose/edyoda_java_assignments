@@ -2,7 +2,7 @@ package practice.lessons.inheritancenew;
 
 import practice.lessons.inheritancelesson.Car;
 
-public class UtilityVehicles extends Car {
+public class UtilityVehicles extends Car { //Cannot Extend Final Class Within same package or across package
 
     public UtilityVehicles(int wheels, int gears, int speed){
         super(wheels, gears, speed);
@@ -14,4 +14,8 @@ public class UtilityVehicles extends Car {
         this.is4WheelDrive = is4WheelDrive;
     }
 
+    @Override
+    public String displayProperties(){
+        return "";
+    }
 }

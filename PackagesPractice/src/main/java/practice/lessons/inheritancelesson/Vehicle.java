@@ -8,6 +8,17 @@ public class Vehicle {
     public int wheels;
     public int gears;
     public int speed;
+    //Private data members are NOT inherited either within or across package
+    private String name;
+
+    //Default
+    //Inherited within same package
+    //NOT inherited across packages
+    String color;
+
+    //Inherited within same package
+    //Inherited across different package
+    protected boolean isAutomatic;
 
     //Constructor is never inherited
     public Vehicle(int wheels, int gears, int speed){
@@ -16,6 +27,29 @@ public class Vehicle {
         this.speed = speed;
     }
 
+    //Private Modifiers are NOT inherited either within or across package
+    private void setName(String n){
+        name = n;
+    }
+
+    //Default
+    //Inherited within same package
+    //NOT inherited across packages
+    void setColor(String c){
+        color = c;
+    }
+
+    //Inherited within same package
+    //Inherited across different package
+    //Object can access protected members/properties within same package
+    //Object CANNOT access protected members/properties across different package
+    protected void setAutomatic(boolean isAut){
+        isAutomatic = isAut;
+    }
+
+    //It can be inherited everywhere
+    //Within Same package
+    //Across Packages
     public void setWheels(int numberOfWheels){
         wheels = numberOfWheels;
     }
@@ -37,8 +71,18 @@ public class Vehicle {
         gears = gears - 1;
     }
 
+    //Parent Class
     public String displayProperties(){
         return "Parent : Wheels : " + this.wheels + ", Gears : " + this.gears + ", Speed : " + this.speed;
+    }
+
+    protected int sum(int a, int b){
+        return a + b;
+    }
+
+    //Final keyword will prevent overriding
+    public final String cannotOverride(){
+        return "Cannot Override";
     }
 
 }
