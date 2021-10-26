@@ -8,6 +8,23 @@ public class Vehicle {
     public int wheels;
     public int gears;
     public int speed;
+
+    //Constructor is never inherited
+    public Vehicle(int wheels, int gears, int speed){
+        this.wheels = wheels;
+        this.gears = gears;
+        this.speed = speed;
+    }
+
+
+
+
+
+
+
+
+
+
     //Private data members are NOT inherited either within or across package
     private String name;
 
@@ -20,12 +37,7 @@ public class Vehicle {
     //Inherited across different package
     protected boolean isAutomatic;
 
-    //Constructor is never inherited
-    public Vehicle(int wheels, int gears, int speed){
-        this.wheels = wheels;
-        this.gears = gears;
-        this.speed = speed;
-    }
+
 
     //Private Modifiers are NOT inherited either within or across package
     private void setName(String n){
