@@ -2,6 +2,10 @@ package revision.conditions;
 
 public class PracticeFor {
 
+    public void donotKnowWhatClassObject(Object obj){
+        //Some functionality
+    }
+
     public int findSumOfArray(int [] arr){
         int length = arr.length;
         int sum = 0;
