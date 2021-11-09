@@ -8,6 +8,7 @@ public class CollectionsLearning {
 
     public static void main(String[] args) {
 
+        ArrayList<String> stringArrayList = new ArrayList<>();
         List<Integer> listOfIntegers = new ArrayList<>();
         listOfIntegers.add(10);
         listOfIntegers.add(10);
