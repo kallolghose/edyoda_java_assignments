@@ -2,6 +2,9 @@ package practice.lessons.exception;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Scanner;
 
 public class Revision {
@@ -17,5 +20,8 @@ public class Revision {
         catch (FileNotFoundException exception){
 
         }
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        System.out.println(formatter.format(LocalDate.now()));
     }
 }

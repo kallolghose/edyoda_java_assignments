@@ -1,7 +1,8 @@
 package practice.lessons.generics;
 
+//Generic Interface
 public interface GenericInterface<T> {
 
-    void print(T t);
+    void print(T variable);
 
 }
