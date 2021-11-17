@@ -2,6 +2,8 @@ package practice.lessons.copy;
 
 public class Name {
 
+    public static final String NAME_CONSTANT = "some_value";
+
     private String firstName;
     private String lastName;
 
