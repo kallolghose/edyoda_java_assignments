@@ -6,7 +6,7 @@ import practice.lessons.compositionlesson.Eraser;
 public abstract class Shape {
 
     //Abstract
-    //1. It does not have a definition
+    //1. It does not have a definition/body
     public abstract double getArea();
     public abstract double getPerimeter();
 

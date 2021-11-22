@@ -13,9 +13,14 @@ public class FirstProgram {
         listOfIntegers.add(20);
         listOfIntegers.add(30);
         listOfIntegers.add(40);
-
-        //TraditionalConsumerImpl traditionalConsumer = new TraditionalConsumerImpl();
-        //Consumer<Integer> printConsumer = integer -> System.out.println(integer);
+        //Lopping
+        for(Integer item : listOfIntegers){
+            System.out.println(item);
+        }
+        //Looping
+        for(int i=0; i<listOfIntegers.size(); i++){
+            System.out.println(listOfIntegers.get(i));
+        }
 
         listOfIntegers.forEach(integer -> System.out.println(integer));
 
