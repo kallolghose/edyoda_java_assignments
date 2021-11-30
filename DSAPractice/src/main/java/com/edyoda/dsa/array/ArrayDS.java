@@ -3,7 +3,7 @@ package com.edyoda.dsa.array;
 public class ArrayDS {
 
     //Array of 10 elements
-    private int [] number = new int[10]; //Declare and Array
+    private int [] number = new int[10]; //Declare and Instantiating Array
 
     public ArrayDS() {
         number[0] = 0;
@@ -48,6 +48,12 @@ public class ArrayDS {
             }
         }
         System.out.println("Number NOT Found");
+    }
+
+    public static void main(String[] args) {
+        ArrayDS arrayDS = new ArrayDS();
+        arrayDS.insert(4, 100);
+        arrayDS.traverse();
     }
 
 }
