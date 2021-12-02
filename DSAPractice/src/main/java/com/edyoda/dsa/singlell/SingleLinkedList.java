@@ -119,48 +119,8 @@ public class SingleLinkedList {
     }
 
     public void reverse(){
-        Node tempHead = head;
-        Node prev = null;
-        Node temp = head;
-
-        while (temp != null){
-            Node next = temp.next;
-            temp.next = prev;
-            prev = temp;
-            temp = next;
-        }
-        head = prev;
-        tail = tempHead;
+        //Implement this function
     }
-
-    public void reverseK(int k){
-        Node currentNode = head;
-        Node prevNode = null;
-        while (currentNode != null){
-            Node nextNode = reverseKNode(prevNode, currentNode, k);
-            prevNode = currentNode;
-            currentNode = nextNode;
-        }
-        prevNode.next = null;
-    }
-
-    private Node reverseKNode(Node prevNode, Node currentNode, int k){
-        Node prev = prevNode;
-        Node temp = currentNode;
-        while(temp !=null && k > 0){
-            Node next = temp.next;
-            temp.next = prev;
-            prev = temp;
-            temp = next;
-            k = k - 1;
-        }
-        if(prevNode == null)
-            head = prev;
-        else
-            prevNode.next = prev;
-        return temp;
-    }
-
 
 
 
@@ -186,8 +146,8 @@ public class SingleLinkedList {
         singleLinkedList.search(20);
         singleLinkedList.search(100);
 
-        singleLinkedList.reverseK(3);
-        singleLinkedList.traversal();
+        //singleLinkedList.reverseK(3);
+        //singleLinkedList.traversal();
     }
 
 }
