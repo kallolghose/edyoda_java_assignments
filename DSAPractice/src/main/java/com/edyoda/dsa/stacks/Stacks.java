@@ -54,4 +54,28 @@ public class Stacks {
         top = null;
     }
 
+    public int evaluatePostfix(String expr){
+        String contents [] = expr.split(" ");
+        for(String ch : contents){
+            if(isOperator(ch)){
+                //POP 2 elements
+            }
+            else{
+                //PUSH
+            }
+        }
+    }
+
+    public boolean isOperator(String str){
+        switch (str){
+            case "+":
+            case "-":
+            case "/":
+            case "%":
+                return true;
+            default:
+                return false;
+        }
+    }
+
 }
