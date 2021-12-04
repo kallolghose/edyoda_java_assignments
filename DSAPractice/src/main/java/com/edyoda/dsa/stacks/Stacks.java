@@ -64,6 +64,7 @@ public class Stacks {
                 //PUSH
             }
         }
+        return 0;
     }
 
     public boolean isOperator(String str){
