@@ -7,11 +7,16 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:sport.properties"></context:property-placeholder>
+
     <bean id="happyFortune" class="com.edyoda.spring.service.HappyFortune"></bean>
     <bean id="sadFortune" class="com.edyoda.spring.service.SadFortune"></bean>
 
-    <bean id="myCoach" class="com.edyoda.spring.BaseballCoach">
+    <bean id="myCoach" class="com.edyoda.spring.BaseballCoach" init-method="initMethod" destroy-method="destroyMethod">
         <constructor-arg ref="sadFortune"/>
+        <property name="email" value="${baseballcoach.email}"/>
+        <property name="team" value="${baseballcoach.team}"/>
+        <property name="experience" value="${baseballcoach.experience}"/>
     </bean>
 
 </beans>

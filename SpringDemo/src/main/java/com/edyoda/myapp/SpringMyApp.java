@@ -8,10 +8,12 @@ public class SpringMyApp {
         //Load the Configuration Class
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         //Retrieve bean
-        Coach theCoach = context.getBean("myCoach", Coach.class);
+        BaseballCoach theCoach = context.getBean("myCoach", BaseballCoach.class);
         //call method
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(theCoach.getDailyFortune());
+        System.out.println(theCoach.getEmail());
+        System.out.println(theCoach.getTeam());
         //close context
         context.close();
     }

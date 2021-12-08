@@ -4,5 +4,6 @@ public interface Coach {
 
     String getDailyWorkout();
     String getDailyFortune(); //Depends on Fortune Service
+    String displayPersonalInfo();
 
 }

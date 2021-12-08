@@ -7,10 +7,15 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="myFortune" class="com.edyoda.myapp.service.HappyFortuneServiceImpl"></bean>
+    <context:property-placeholder location="classpath:sport.properties" />
 
-    <bean id="myCoach" class="com.edyoda.myapp.BaseballCoach">
+    <bean id="myFortune" class="com.edyoda.myapp.service.HappyFortuneServiceImpl"
+    init-method=""></bean>
+
+    <bean id="myCoach" class="com.edyoda.myapp.BaseballCoach" scope="singleton">
         <constructor-arg ref="myFortune"/>
+        <property name="email" value="${baseballcoach.email}"/>
+        <property name="team" value="${baseballcoach.team}"/>
     </bean>
 
 </beans>
