@@ -7,7 +7,8 @@ public class SpringAnnotationsMain {
 
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
 
         Vehicle vehicle = context.getBean("fordCar", Vehicle.class);
         System.out.println(vehicle.getEnginePower());
