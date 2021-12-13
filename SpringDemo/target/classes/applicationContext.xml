@@ -12,7 +12,7 @@
     <bean id="myFortune" class="com.edyoda.myapp.service.HappyFortuneServiceImpl"
     init-method=""></bean>
 
-    <bean id="myCoach" class="com.edyoda.myapp.BaseballCoach" scope="singleton">
+    <bean id="myCoach" class="com.edyoda.myapp.mycomponents.BaseballCoach" scope="singleton">
         <constructor-arg ref="myFortune"/>
         <property name="email" value="${baseballcoach.email}"/>
         <property name="team" value="${baseballcoach.team}"/>

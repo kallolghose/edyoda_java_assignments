@@ -1,4 +1,4 @@
-package com.edyoda.myapp;
+package com.edyoda.myapp.mycomponents;
 
 import com.edyoda.myapp.service.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;

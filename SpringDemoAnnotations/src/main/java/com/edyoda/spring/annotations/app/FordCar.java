@@ -13,16 +13,6 @@ import javax.annotation.PreDestroy;
 @Scope("singleton")
 public class FordCar implements Vehicle {
 
-    @PostConstruct
-    public void init(){
-        System.out.println(":::::::::::: INIT :::::::::::");
-    }
-
-    @PreDestroy
-    public void destroy(){
-        System.out.println(":::::::::::: DESTROY :::::::::::::");
-    }
-
     @Autowired
     @Qualifier("sportsMode")
     private Mode mode;

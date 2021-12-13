@@ -1,5 +1,6 @@
 package com.edyoda.myapp;
 
+import com.edyoda.myapp.mycomponents.BaseballCoach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringMyApp {

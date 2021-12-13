@@ -1,4 +1,4 @@
-package com.edyoda.myapp;
+package com.edyoda.myapp.mycomponents;
 
 public interface Coach {
 
