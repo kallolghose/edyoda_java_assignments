@@ -17,6 +17,16 @@ public class FordCar implements Vehicle {
     @Qualifier("sportsMode")
     private Mode mode;
 
+    @PostConstruct
+    void postConstruct(){
+
+    }
+
+    @PreDestroy
+    void preDestroy(){
+
+    }
+
 //    @Autowired
 //    public FordCar(@Qualifier("sportsMode") Mode mode){
 //        this.mode = mode;

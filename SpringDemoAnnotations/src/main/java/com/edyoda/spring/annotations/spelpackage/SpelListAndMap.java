@@ -3,7 +3,7 @@ package com.edyoda.spring.annotations.spelpackage;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("SpelListAndMap")
 public class SpelListAndMap {
 
     @Value("#{workersHolder.salaryByWorkers['John']}")

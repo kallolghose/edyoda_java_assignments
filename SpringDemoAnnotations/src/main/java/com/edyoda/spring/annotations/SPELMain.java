@@ -18,7 +18,7 @@ public class SPELMain {
 //        System.out.println("getCheckSpelComponentValueGt1000 : " + spelExample.getCheckSpelComponentValueGt1000());
 //        System.out.println(spelExample.getCompanyName());
 
-        SpelListAndMap spelListAndMap = context.getBean("spelListAndMap", SpelListAndMap.class);
+        SpelListAndMap spelListAndMap = context.getBean("SpelListAndMap", SpelListAndMap.class);
         System.out.println(spelListAndMap.getJohnSalary());
         System.out.println(spelListAndMap.getFirstWorker());
 
