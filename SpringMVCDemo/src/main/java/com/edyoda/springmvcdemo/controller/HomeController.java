@@ -19,11 +19,6 @@ public class HomeController {
         return "helloworld-form";
     }
 
-    @RequestMapping("/processForm")
-    public String processForm(){
-        return "helloworld";
-    }
-
     @RequestMapping("/processFormV2")
     public String processFormV2(HttpServletRequest request, Model model){
         String name = request.getParameter("studentName");

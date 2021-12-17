@@ -6,6 +6,7 @@
     <p>Please select a link</p>
     <ul>
         <li><a href="showForm">Hello World Form</a></li>
+        <li><a href="student/getInformation">Student Form</a></li>
     </ul>
 </body>
 </html>
