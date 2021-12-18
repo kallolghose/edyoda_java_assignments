@@ -12,6 +12,8 @@ public class Student {
     private String firstName;
     private String lastName;
     private String country;
+    private String language;
+    private String [] operatingSystems;
 
     private Map<String, String> countryOptions;
 
@@ -23,6 +25,22 @@ public class Student {
         countryOptions.put("GR", "Germany");
         countryOptions.put("UK", "United Kingdom");
         countryOptions.put("FR", "France");
+    }
+
+    public String[] getOperatingSystems() {
+        return operatingSystems;
+    }
+
+    public void setOperatingSystems(String[] operatingSystems) {
+        this.operatingSystems = operatingSystems;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 
     public Map<String, String> getCountryOptions() {

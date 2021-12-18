@@ -1,0 +1,4 @@
+com\edyoda\portal\model\Student.class
+com\edyoda\portal\controller\HomeController.class
+com\edyoda\portal\controller\StudentController.class
+com\edyoda\portal\Main.class

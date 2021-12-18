@@ -1,13 +1,21 @@
 package com.edyoda.springmvcdemo.model;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.LinkedHashMap;
 
 public class StudentModel {
 
     private String firstName;
+
+    @NotNull(message = "is required")
+    @Size(message = "is required")
     private String lastName;
+
     private String country;
+
     private String language;
+
     private String [] operatingSystem;
 
     private LinkedHashMap<String, String> countryOptions;

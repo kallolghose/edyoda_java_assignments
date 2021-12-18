@@ -8,6 +8,7 @@
     		First name: <form:input path="firstName" />
     		<br><br>
     		Last name: <form:input path="lastName" />
+    		<form:errors path="lastName" cssClass="error" />
     		<br><br>
              Country :
                <form:select path="country">
