@@ -4,6 +4,7 @@
 </head>
 <body>
     <p>Student Form Link : <span> <a href="/student/showForm">Click Here</a> </span>
+    <p>Customer Form Link : <span> <a href="/customer/showForm">Click Here</a> </span>
     </p>
 </body>
 </html>

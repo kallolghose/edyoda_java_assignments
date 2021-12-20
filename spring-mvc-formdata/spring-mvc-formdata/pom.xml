@@ -21,6 +21,7 @@
     <javax.servlet.version>4.0.1</javax.servlet.version>
     <apache.commontext.version>1.9</apache.commontext.version>
     <jakarta.servlet.jsp.jstl.version>1.2.6</jakarta.servlet.jsp.jstl.version>
+    <hibernate.validator.version>6.2.1.Final</hibernate.validator.version>
   </properties>
 
   <dependencies>
@@ -72,6 +73,14 @@
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
       <version>${jakarta.servlet.jsp.jstl.version}</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>${hibernate.validator.version}</version>
+    </dependency>
+
 
     <dependency>
       <groupId>junit</groupId>

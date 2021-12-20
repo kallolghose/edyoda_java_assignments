@@ -1,6 +1,4 @@
-package com.edyoda.springmvcdemo.model;
-
-import com.edyoda.springmvcdemo.customvalidator.CourseCode;
+package com.edyoda.portal.model;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -11,17 +9,14 @@ public class Customer {
 
     private String firstName;
 
-    @NotNull(message = "is required")
-    @Size(min = 1, message = "is required")
+    @NotNull(message = "Field Cannot Be Empty")
+    @Size(min = 1, message = "Field Cannot Be Empty")
     private String lastName;
 
-    @NotNull(message = "is required")
-    @Min(value = 0, message = "Should be greater than or equal to 0")
-    @Max(value = 10, message = "Should be less than or equal to 10")
+    @NotNull(message = "Field Cannot Be Empty")
+    @Min(value = 0, message = "Field should be greater than or equal to 0")
+    @Max(value = 20, message = "Field should be less than or equal to 20")
     private Integer freePasses;
-
-    @CourseCode(value = "REF", message = "Must Start with REF")
-    private String courseCode;
 
     public String getFirstName() {
         return firstName;
@@ -45,13 +40,5 @@ public class Customer {
 
     public void setFreePasses(Integer freePasses) {
         this.freePasses = freePasses;
-    }
-
-    public String getCourseCode() {
-        return courseCode;
-    }
-
-    public void setCourseCode(String courseCode) {
-        this.courseCode = courseCode;
     }
 }
