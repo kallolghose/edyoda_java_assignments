@@ -1,9 +1,8 @@
 package com.edyoda.portal.model;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import com.edyoda.portal.validation.CourseCode;
+
+import javax.validation.constraints.*;
 
 public class Customer {
 
@@ -17,6 +16,28 @@ public class Customer {
     @Min(value = 0, message = "Field should be greater than or equal to 0")
     @Max(value = 20, message = "Field should be less than or equal to 20")
     private Integer freePasses;
+
+    @Pattern(regexp = "^[0-9]{6}$", message = "Please enter a valid field")
+    private String pincode;
+
+    @CourseCode(value = "REF", message = "Course should start with REF")
+    private String courseCode;
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
+    }
+
+    public String getPincode() {
+        return pincode;
+    }
+
+    public void setPincode(String pincode) {
+        this.pincode = pincode;
+    }
 
     public String getFirstName() {
         return firstName;
