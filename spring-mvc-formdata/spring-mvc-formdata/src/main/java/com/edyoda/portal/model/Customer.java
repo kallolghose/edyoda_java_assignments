@@ -4,6 +4,7 @@ import com.edyoda.portal.validation.CourseCode;
 
 import javax.validation.constraints.*;
 
+
 public class Customer {
 
     private String firstName;
