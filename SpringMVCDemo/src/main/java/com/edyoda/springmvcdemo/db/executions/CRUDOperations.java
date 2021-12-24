@@ -23,8 +23,23 @@ public class CRUDOperations {
             //Student student = session.get(Student.class, 1);
             List<Student> students = session.createQuery("from Student")
                             .getResultList();
-            for(Student student:students)
+            for(Student student:students) {
                 System.out.println(student.toString());
+            }
+
+            students = session.createQuery("from Student s where s.lastName='Holland'").getResultList();
+            for (Student student : students){
+                System.out.println(student);
+            }
+
+            Student kallol = session.get(Student.class, 1);
+            kallol.setLastName("Ghosh");
+
+            session.createQuery("update Student set email='something'").executeUpdate();
+
+            session.delete(kallol);
+            session.createQuery("delete from Student where id=1").executeUpdate();
+
             session.getTransaction().commit();
         }
         catch (Exception ex){
