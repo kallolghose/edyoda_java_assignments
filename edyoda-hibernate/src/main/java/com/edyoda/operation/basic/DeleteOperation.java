@@ -1,4 +1,4 @@
-package com.edyoda.operation;
+package com.edyoda.operation.basic;
 
 import com.edyoda.entity.Student;
 import org.hibernate.Session;

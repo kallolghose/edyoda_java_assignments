@@ -1,33 +1,25 @@
-package com.edyoda.operation;
+package com.edyoda.operation.one2one;
 
-import com.edyoda.entity.Student;
+import com.edyoda.entity.Instructor;
+import com.edyoda.entity.InstructorDetail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class WriteOperation {
+public class DeleteOperation {
 
     public static void main(String[] args) {
         SessionFactory sessionFactory = new Configuration()
                 .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Student.class)
+                .addAnnotatedClass(Instructor.class)
+                .addAnnotatedClass(InstructorDetail.class)
                 .buildSessionFactory();
 
         Session session = sessionFactory.getCurrentSession();
-
-        try {
-            Student student1 = new Student("Tom", "Hardy", "tomhardy@gmail.com");
-            Student student2 = new Student("Tom", "Hanks", "tomhanks@gmail.com");
-
-            //Start a transaction
+        try{
             session.beginTransaction();
-
-            //Perform the db operation
-            //Write to DB
-            session.save(student1);
-            session.save(student2);
-
-            //Commit the transaction
+            Instructor instructor = session.get(Instructor.class, 1);
+            session.delete(instructor);
             session.getTransaction().commit();
         }
         catch (Exception e){
@@ -38,7 +30,5 @@ public class WriteOperation {
             session.close();
             sessionFactory.close();
         }
-
     }
-
 }
