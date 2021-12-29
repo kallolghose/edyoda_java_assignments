@@ -17,18 +17,24 @@ public class InstructorDetail {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "youtube_channel")
-    private String youtubeChannel;
+    @Column(name = "twitter_handle")
+    private String twitterHandle;
 
-    @Column(name = "hobby")
-    private String hobby;
+    @Column(name = "linkedin_profile")
+    private String linkedinProfile;
 
-    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    //Bi-Directional
+    @OneToOne(mappedBy = "instructorDetail")
     private Instructor instructor;
 
-    public InstructorDetail(String youtubeChannel, String hobby){
-        this.hobby = hobby;
-        this.youtubeChannel = youtubeChannel;
+    public InstructorDetail(String twitterHandle, String linkedinProfile) {
+        this.twitterHandle = twitterHandle;
+        this.linkedinProfile = linkedinProfile;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Instructor Details : [ID = %d, Twitter = %s, LinkedIn = %s]", id, twitterHandle, linkedinProfile);
     }
 
 }
