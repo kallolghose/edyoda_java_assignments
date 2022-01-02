@@ -43,6 +43,7 @@ public class CRUDOperations {
             session.getTransaction().commit();
         }
         catch (Exception ex){
+            session.getTransaction().rollback();
             ex.printStackTrace();
         }
         finally {
