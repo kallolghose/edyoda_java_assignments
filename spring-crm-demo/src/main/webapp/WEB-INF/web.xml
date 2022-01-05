@@ -7,6 +7,11 @@
 
   <display-name>Customer Relationship Manager</display-name>
 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
   <!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
   <servlet>
     <servlet-name>dispatcher</servlet-name>
