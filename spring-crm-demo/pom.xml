@@ -25,19 +25,30 @@
     <mysql.connector.version>8.0.27</mysql.connector.version>
     <jakarta.servlet.api>1.2.6</jakarta.servlet.api>
     <c3p0.version>0.9.5.5</c3p0.version>
+    <aspect.weaver.version>1.9.7</aspect.weaver.version>
   </properties>
 
   <dependencies>
 
-    <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspect.weaver.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjtools</artifactId>
+      <version>${aspect.weaver.version}</version>
+    </dependency>
+
+
     <dependency>
       <groupId>com.mchange</groupId>
       <artifactId>c3p0</artifactId>
       <version>${c3p0.version}</version>
     </dependency>
 
-
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
