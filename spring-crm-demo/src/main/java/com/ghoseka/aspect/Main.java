@@ -9,7 +9,9 @@ public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AspectConfig.class);
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
-        accountDAO.addAccount();
+        accountDAO.addAccount("1XXXX");
+        accountDAO.setName("Kallol");
+        System.out.println(accountDAO.getName());
         context.close();
     }
 

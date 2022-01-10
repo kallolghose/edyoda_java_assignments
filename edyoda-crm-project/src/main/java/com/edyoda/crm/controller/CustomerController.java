@@ -16,7 +16,7 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @RequestMapping("/list")
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String listCustomers(Model model){
         List<Customer> customers = customerService.getCustomers();
         model.addAttribute("customers", customers);
