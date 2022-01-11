@@ -2,8 +2,22 @@ package com.ghoseka.aspect.programs;
 
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class HitProgram {
+
+    public int maxHitCountUsingRegex(String str){
+        Pattern pattern = Pattern.compile("h+i+t+");
+        Matcher matcher = pattern.matcher(str);
+        int max = -99;
+        while (matcher.find()){
+            int temp = matcher.group().length();
+            if(temp > max)
+                max = temp;
+        }
+        return max;
+    }
 
     public int maxHitCount(String str){
         Stack<String> stack = new Stack<>();
@@ -50,11 +64,12 @@ public class HitProgram {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter String : ");
-        String str = scanner.next();
+//        System.out.print("Enter String : ");
+//        String str = scanner.next();
 
         HitProgram hitProgram = new HitProgram();
-        System.out.println(hitProgram.maxHitCount(str));
+//        System.out.println(hitProgram.maxHitCount(str));
+        System.out.println(hitProgram.maxHitCountUsingRegex("hihhittabciiitt"));
 
     }
 
