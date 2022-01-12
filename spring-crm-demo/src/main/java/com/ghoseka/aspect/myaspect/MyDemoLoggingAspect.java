@@ -1,9 +1,7 @@
 package com.ghoseka.aspect.myaspect;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
@@ -30,7 +28,18 @@ public class MyDemoLoggingAspect {
         for(Object str : joinPoint.getArgs()){
             System.out.println(str);
         }
+    }
+
+    @AfterReturning(pointcut = "", returning = "result")
+    public void afterReturning(JoinPoint joinPoint, Object result){
 
     }
+
+    @AfterThrowing(pointcut = "", throwing = "ex")
+    public void afterThrowing(JoinPoint joinPoint, Throwable ex){
+
+    }
+
+
 
 }
